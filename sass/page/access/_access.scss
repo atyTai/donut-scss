@@ -1,0 +1,61 @@
+@use "../../global"as g;
+
+/*!
+page > access > access
+------------------------------
+*/
+
+
+.access-info {
+    display: flex;
+
+    @include g.max-r(lg) {
+        display: block;
+    }
+
+
+
+    .map {
+        width: 55%;
+        padding: 5px;
+
+        @include g.max-r(lg) {
+            width: 100%;
+        }
+
+        iframe {
+            height: 50vh;
+            border: 0;
+            width: 100%
+        }
+    }
+
+    .access-info-text {
+        width: 45%;
+        padding: 30px;
+
+        @include g.max-r(lg) {
+            width: 100%;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+
+
+
+            p {
+
+                display: inline;
+                margin-left: 6px;
+            }
+
+            i {
+                margin-left: 4px;
+            }
+
+
+        }
+    }
+
+}

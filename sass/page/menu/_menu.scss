@@ -1,0 +1,77 @@
+@use "sass:map";
+@use "../../global"as g;
+
+/*!
+page > menu > menu
+------------------------------
+*/
+
+
+
+
+$imgs: 23684703_s,
+23949213_s,
+23949701_s,
+24423898_s,
+dornatu,
+leftt;
+
+
+
+.images {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    .image {
+
+        width: 28%;
+        margin: 0 2%;
+
+        @include g.max-r(md) {
+            width: 90%;
+        }
+
+        p {
+            margin: 0 10px !important;
+
+        }
+
+        .payment {
+            margin-top: 10px;
+            margin-bottom: 70px !important;
+            text-align: center;
+        }
+    }
+}
+
+
+$i : 0;
+
+
+@each $img in $imgs {
+
+    $i: $i + 1;
+
+
+
+    .images .img#{$i} span {
+        display: block;
+        width: 100%;
+        padding-top: 100%;
+
+        background-size: cover;
+        background-image: url(../img/#{$img}.jpg);
+        background-position: center;
+    }
+
+
+
+
+
+
+
+}

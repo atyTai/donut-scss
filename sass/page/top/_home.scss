@@ -1,0 +1,35 @@
+@use "../../global"as g;
+
+/*!
+page > top > home
+------------------------------
+*/
+
+
+
+.top-img {
+
+    display: flex;
+
+
+
+    height: 500px;
+
+    @include g.max-r(md) {
+        height: 250px;
+    }
+
+    span {
+        background-size: cover;
+        background-image: url(../img/24194717_m.jpg);
+        background-position: center;
+
+        width: 100%;
+    }
+}
+
+
+.bottom-text {
+    margin-bottom: 0;
+    padding-bottom: 15px;
+}

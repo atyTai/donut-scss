@@ -1,0 +1,24 @@
+@use "../global"as g;
+
+/*!
+layout > container
+------------------------------
+*/
+%container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.l-container-s {
+    padding: 5px;
+    @extend %container;
+    max-width: var(--width-content-s);
+    background-color: white;
+}
+
+.l-container {
+    padding: 5px;
+    background-color: white;
+    @extend %container;
+    max-width: var(--width-content);
+}

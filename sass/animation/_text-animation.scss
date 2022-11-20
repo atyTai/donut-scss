@@ -1,0 +1,58 @@
+@use "../global"as g;
+
+/*!
+animation > text-animation
+------------------------------
+*/
+
+
+/* フェードイン */
+main {
+    animation: fade 1000ms;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+/* スライドアップ */
+@for $i from 0 through 10 {
+    $enter-delay: 200ms;
+
+    .l-container {
+        overflow: hidden;
+
+    }
+
+    main .l-container:nth-child(#{$i}) {
+        animation: slideUpOunter 1s #{400ms * $i + $enter-delay} backwards;
+    }
+
+}
+
+@keyframes slideUpOunter {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+
+
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}

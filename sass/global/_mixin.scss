@@ -1,0 +1,25 @@
+// 矢印
+// ex)
+// <li class="side-item">
+//     <a class="side-link">サイドメニュー</a>
+// </li>
+// .side-link{
+//     @include arrow(45deg, #000, 8px, 8px, 0, 8px, 0, auto);
+// }
+
+
+@mixin one-flex($padding: 0 5px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $padding;
+
+}
+
+
+@mixin linkd($padding: 8px) {
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--color-font-accent);
+    padding: 8px;
+}
